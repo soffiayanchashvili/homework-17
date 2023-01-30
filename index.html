@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 1 -->
+    <div id="button"><button id="removeClick">Click me and i'll dissepear!</button></div>
+<!-- 2 -->
+    <div id="divId">
+        <input type="number" id="numbersId">
+        <button id="buttonsId">click</button>
+        <p id="textId"></p>
+    </div>
+<!-- 4 -->
+    <div id="user-list"></div>
+
+    <script>
+//#1
+    const button = document.getElementById('removeClick');
+    button.addEventListener('click', () => {
+        removeClick.remove()
+    });
+    removeClick.style.height='100px';
+    removeClick.style.width='100%';
+//#2
+    const img = document.createElement ("img");
+    img.src = "https://i.ytimg.com/vi/VEx5hNYeZtY/hqdefault.jpg";
+    document.body.appendChild(img);
+    img.style.height='300px';
+    img.style.width='500px';
+    img.style.borderRadius='15px';
+    img.style.marginTop='40px';
+
+    
+//#3
+const numbersId = document.getElementById('numbersId');
+const buttonsId = document.getElementById('buttonsId');
+const textId = document.getElementById('textId');
+
+
+numbersId.addEventListener('input', (e)=> {
+    let numbersIdValue = e.target.Value
+    textId.textContent = numbersIdValue
+})
+
+
+//#4
+const users = [
+{
+id: 7,
+email: "michael.lawson@reqres.in",
+first_name: "Michael",
+last_name: "Lawson",
+avatar: "https://reqres.in/img/faces/7-image.jpg&quot",
+},
+{
+id: 8,
+email: "lindsay.ferguson@reqres.in",
+first_name: "Lindsay",
+last_name: "Ferguson",
+avatar: "https://reqres.in/img/faces/8-image.jpg&quot",
+},
+{
+id: 9,
+email: "tobias.funke@reqres.in",
+first_name: "Tobias",
+last_name: "Funke",
+avatar: "https://reqres.in/img/faces/9-image.jpg&quot",
+},
+{
+id: 10,
+email: "byron.fields@reqres.in",
+first_name: "Byron",
+last_name: "Fields",
+avatar: "https://reqres.in/img/faces/10-image.jpg&quot",
+},
+{
+id: 11,
+email: "george.edwards@reqres.in",
+first_name: "George",
+last_name: "Edwards",
+avatar: "https://reqres.in/img/faces/11-image.jpg&quot",
+},
+{
+id: 12,
+email: "rachel.howell@reqres.in",
+first_name: "Rachel",
+last_name: "Howell",
+avatar: "https://reqres.in/img/faces/12-image.jpg&quot",
+}
+];
+    </script>
+</body>
+</html>
